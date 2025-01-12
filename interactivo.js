@@ -1,6 +1,9 @@
-// Función para desplegar detalles al hacer clic
-document.querySelectorAll('.timeline-item').forEach(item => {
-    item.addEventListener('click', function() {
-        this.classList.toggle('open');
+document.querySelectorAll('.timeline-event').forEach(event => {
+    event.addEventListener('mouseenter', () => {
+        event.querySelector('.timeline-content').style.transform = 'scale(1.1)';
+    });
+
+    event.addEventListener('mouseleave', () => {
+        event.querySelector('.timeline-content').style.transform = 'scale(1)';
     });
 });
